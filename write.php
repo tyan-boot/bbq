@@ -63,7 +63,6 @@ function verify(thisform)
 <p>显示昵称:<input type="text" name="n_name" /><spwn style="color:#F00;">* 必填，将会显示。</spwn></p>
 <p>真实姓名:<input type="text" name="name" /># 他人无法知道你是谁，可以留空</p>
 <p>联系方式:<input type="text" name="contact" /># 仅管理员可见，推荐填写，方便取得联系。可填写QQ、邮箱、手机等。如需删除，此项目可作为身份标识</p>
-<p>对方邮箱:<input type="text" name="email" /> # 可选，如果填写，则向Ta的邮箱发送一封邮件通知^_^发送邮件会占用更多时间，通常在10～25秒.</p>
 <p>* 亲，你想对Ta说点什么呢？<br /><textarea cols=auto rows="10" name="txt"></textarea></p>
 <p><input type="submit" value="提交匿名表白"/></p>
 </form>
