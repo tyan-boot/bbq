@@ -55,4 +55,4 @@ define("CFG","",true);
 * bbq_config.php暂时需要手动更新，内容如上所示
 
 ##联系我
-发送邮件到<a href=mailto:tyan-boot@outlook.com?subject=表白墙源码反馈>tyan-bbq@outlook.com</a>
+发送邮件到 <a href=mailto:tyan-bbq@outlook.com?subject=表白墙源码反馈>tyan-bbq@outlook.com</a>
