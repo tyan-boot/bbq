@@ -31,7 +31,7 @@ $nname = htmlspecialchars($nname);
 $sql -> query("insert into bbq (nick,name,contact,time,id,txt) values('$nname','$r_name','$_POST[contact]','$time','$id','$txt');");
 $sql -> close();
 include_once "mail.php";
-if (isset($_POST['email']))
+if ($_POST['email']!=null ||$_POST['email']!="")
 	{
 	$email = $_POST['email'];
 	if (filter_var($email, FILTER_VALIDATE_EMAIL))
