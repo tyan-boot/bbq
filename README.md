@@ -1,6 +1,6 @@
 # 匿名表白墙
 
-匿名表白墙使用PHP写成，数据库默认使用MySQL，邮件发送类库使用[PHPMailer](https://github.com/PHPMailer/PHPMailer)
+匿名表白墙使用PHP写成，数据库默认使用MySQL，此分支不提供邮件服务
 
 ##协议
 
@@ -19,8 +19,6 @@
 **/**
 * **admin.php** 用来对消息进行删除
 * **bbq_config.php** 数据库配置文件
-* **class.phpmailer.php**
-* **class.smtp.php** 上述两文件为phpmailer核心文件
 * **head.html** 页头文件
 * **index.php** 首页文件，调用read.php并设置一些参数
 * **mail.php** 调用phpmailer进行邮件发送
@@ -51,7 +49,7 @@ define("CFG","",true);
 ```
 
 ##注意
-* PHPMailer需PHP服务器启用socket支持
+* 不提供邮件服务
 * bbq_config.php暂时需要手动更新，内容如上所示
 
 ##联系我
