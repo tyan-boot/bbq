@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="CSS/head.css" />
 </head>
 <?php
+
 include_once "bbq_config.php";
 echo <<<i_d
 <form action="admin.php" method=get>
@@ -25,4 +26,6 @@ if (isset($_GET['id']))
 	echo $del;
 	echo "\nfinished!";
 	}
-	else{echo "error p
+	else{echo "error passwd";}
+}
+?>
