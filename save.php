@@ -31,7 +31,13 @@ $nname = $_POST['n_name'];
 $nname = stripslashes($nname);
 $nname = htmlspecialchars($nname);
 
-$ip = $_SERVER["REMOTE_ADDR"];
+if ($_SERVER["HTTP_X_FORWARDED_FOR"]=="")
+{
+$ip=$_SERVER["REMOTE_ADDR"];
+} 
+else
+$ip=$_SERVER["HTTP_X_FORWARDED_FOR"];
+
 $sql -> query("SET NAMES 'utf8'");
 $sql -> query("insert into bbq (nick,name,contact,time,id,txt,ip) values('$nname','$r_name','$_POST[contact]','$time','$id','$txt','$ip');");
 $sql -> close();
