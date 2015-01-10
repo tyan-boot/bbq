@@ -20,7 +20,8 @@ if (isset($_GET['id']))
 {
 	$id = $_GET['id'];
 	 $sql = new mysqli(HOST,USER,PASSWD,DB);
-	 date_default_timezone_set("Asia/Shanghai");
+	date_default_timezone_set("Asia/Shanghai");
+	$sql -> query("set names utf8");
 	 $read = $sql -> query("select nick,time,id,txt from bbq  where id=$id");
 	 $now = $read -> fetch_array();
 	 $time=date("Y-m-d h:i:s a",$now['time']);

@@ -10,6 +10,7 @@ $id = $id -> fetch_array();
 $id = $id['id'];
 $id_max = $id - (($page-1)*15);
 $id_min = $id - (($page)*15+1);
+$sql -> query("SET NAMES 'utf8'");
 $read = $sql -> query("select nick,time,id,txt from bbq  where id between $id_min and $id_max order by id desc ");
 while ($now = $read -> fetch_array())
 {

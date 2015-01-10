@@ -32,7 +32,7 @@ $nname = stripslashes($nname);
 $nname = htmlspecialchars($nname);
 
 $ip = $_SERVER["REMOTE_ADDR"];
-
+$sql -> query("SET NAMES 'utf8'");
 $sql -> query("insert into bbq (nick,name,contact,time,id,txt,ip) values('$nname','$r_name','$_POST[contact]','$time','$id','$txt','$ip');");
 $sql -> close();
 
