@@ -22,17 +22,23 @@ $time=time();
 $now = $sql -> query("select id from bbq order by id desc;");
 $id = $now -> fetch_array();
 $id=$id['id']+1;
+//txt过滤
 $txt = $_POST['txt'];
 $txt = stripslashes($txt);
 $txt = htmlspecialchars($txt);
+//昵称过滤
 $nname = $_POST['n_name'];
 $nname = stripslashes($nname);
 $nname = htmlspecialchars($nname);
-$sql -> query("insert into bbq (nick,name,contact,time,id,txt) values('$nname','$r_name','$_POST[contact]','$time','$id','$txt');");
+
+$ip = $_SERVER["REMOTE_ADDR"];
+
+$sql -> query("insert into bbq (nick,name,contact,time,id,txt,ip) values('$nname','$r_name','$_POST[contact]','$time','$id','$txt','$ip');");
 $sql -> close();
-include_once "mail.php";
+
 if ($_POST['email']!=null ||$_POST['email']!="")
-	{
+{
+	include_once "mail.php";
 	$email = $_POST['email'];
 	if (filter_var($email, FILTER_VALIDATE_EMAIL))
 	{sendmail($email,$id);}
