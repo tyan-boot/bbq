@@ -18,6 +18,9 @@
 
 **/**
 * **admin.php** 用来对消息进行删除
+* **install.php** 数据库初始化文件
+> **你必须首先执行一次install.php来初始化数据库!
+
 * **bbq_config.php** 数据库配置文件
 * **class.phpmailer.php**
 * **class.smtp.php** 上述两文件为phpmailer核心文件
