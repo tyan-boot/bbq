@@ -14,7 +14,7 @@
 include_once 'bbq_config.php';
 include_once 'head.html';
 echo <<<eot
-<div class="text">
+<div class="text pid">
 eot;
 if (isset($_GET['id']))
 {
@@ -25,12 +25,16 @@ if (isset($_GET['id']))
 	 $read = $sql -> query("select nick,time,id,txt from bbq  where id=$id");
 	 $now = $read -> fetch_array();
 	 $time=date("Y-m-d h:i:s a",$now['time']);
-	echo $now['nick'] . ":";
-	echo '<br />';
-	echo '<p>';
-	echo $now['txt'];
-	echo '</p>';
-	echo $time;
+$nick = $now['nick'];
+$txt = $now['txt'];
+echo <<<pid
+$nick:
+<br />
+<p>
+$txt
+</p>
+$time
+pid;
 	echo <<<ret
 	<br />
 	<br />

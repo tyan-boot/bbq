@@ -45,11 +45,6 @@ background: linear-gradient(top,#656565,#4a4a4a);
 
 .text
 {
-	/*
-	outline-style:outset;
-	outline-width:thin;
-	outline-color:#CCC;
-	*/
  margin:0px;
 	margin-left:15%;
 	margin-right:15%;
@@ -62,6 +57,12 @@ background: linear-gradient(top,#656565,#4a4a4a);
  box-shadow:3px 3px 5px #BEBEBE;
  background-color:#ededef;
  border-radius:10px;
+}
+.text.pid
+{
+	margin:15%;
+	margin-left:15%;
+	margin-right:15%;
 }
 p
 {
