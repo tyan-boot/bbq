@@ -9,7 +9,7 @@ contact varchar(64) character set utf8,
 time int(12),
 id int(5),
 txt text character set utf8,
-ip varchar(15),
+ip varchar(15)
 )";
 $con -> query($sql);
 $con -> query("ALTER TABLE `bbq` ADD PRIMARY KEY(`id`);");
