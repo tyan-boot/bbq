@@ -19,21 +19,15 @@ while ($now = $read -> fetch_array())
  $txt = $now['txt'];
  $id = $now['id'];
  echo <<<text
+ <div class="box">
  <a href="pid.php?id=$id">$nick:</a>
  <br />
  <p>
  $txt
  </p>
  $time
- <hr />
+ </div>
 text;
-	/*echo $now['nick'] . ":";
-	echo '<br />';
-	echo '<p>';
-	echo $now['txt'];
-	echo '</p>';
-	echo $time;
-	echo '<hr />';*/
 }
 $sql -> close();
 echo '<div id="foot">Copyright 2014 Boot. All Rights Reserved.</div>';

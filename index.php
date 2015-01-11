@@ -60,8 +60,10 @@ btn_n;
 <?php
 $index = "index.php";
 echo <<<top
+<div class="box">
 <b>02^华:</b>
-<p>欢迎来到表白墙，在这里你所发送的消息通通是匿名的！ 如果有疑问，请发送邮件到<a href=mailto:tyan-bbq@outlook.com?subject=表白墙反馈>tyan-bbq@outlook.com</a>有什么想写给Ta但是又不好意思直说的，这里可以满足你的要求！</p><hr />
+<p>欢迎来到表白墙，在这里你所发送的消息通通是匿名的！ 如果有疑问，请发送邮件到<a href=mailto:tyan-bbq@outlook.com?subject=表白墙反馈>tyan-bbq@outlook.com</a>有什么想写给Ta但是又不好意思直说的，这里可以满足你的要求！</p>
+</div>
 top;
 include "read.php";
 unset($index);
