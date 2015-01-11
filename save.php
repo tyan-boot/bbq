@@ -54,7 +54,6 @@ if ($_POST['email']!=null ||$_POST['email']!="")
 	else 
 	{echo "对不起您输入的邮件地址有误，不予发送，但消息依旧会发布到首页:)";}
 	}
-echo '提交成功！';
-	echo ('<div onclick="window.location.href=\'index.php\' " style=" padding:15px;text-align:center; height:20px; width:100px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;">返回查看</div>');
+echo ('<div onclick="window.location.href=\'index.php\' " style=" padding:15px;text-align:center; height:50px; width:100px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />返回查看</div>');
 }
 ?>
