@@ -37,14 +37,12 @@ else if ($page <= 0)
 $sql -> close();
 ?>
 
-
-<div style="margin-left:15%;">
-<button onclick="window.location.href='write.php'" class="button black"/>我也要写表白</button>
-</div>
-
 <div class="text">
 <?php 
 if ($page!=1){$page_p = $page-1;} else {$page_p = $page;}
+echo <<<btn_w
+<button onclick="window.location.href='write.php'" class="button black"/>我也要写表白</button>
+btn_w;
 echo <<<btn_p
 <button onclick="window.location.href='?page=$page_p'" class="page"/>上一页</button>
 btn_p;
@@ -56,7 +54,6 @@ echo <<<btn_n
 <button onclick="window.location.href='?page=$page_n'" class="page"/>下一页</button>
 btn_n;
 ?>
-<hr />
 <?php
 if (isset($_GET['lover']) && $_GET['lover']=="boot")
 {
