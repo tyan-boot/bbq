@@ -66,7 +66,7 @@ background: linear-gradient(top,#656565,#4a4a4a);
 p
 {
 	text-indent:2em;
-	font-size:130%;
+	font-size:115%;
 }
 .write
 {
@@ -102,6 +102,7 @@ p
 #foot{
 	text-align:center;
 	text-indent:0em;
+	font-size:70%;
 }
 
 .box
@@ -112,16 +113,13 @@ p
 	border-bottom-right-radius:100px;
 	box-shadow:5px 5px 8px #CCCCCC;
 	margin-bottom:20px;
-	background:#F5F5F5;
+	background:#FBFBFB;
 	padding-left:20px;
 	padding-top:15px;
 	padding-right:100px;
 	color:#616161;
 }
-.box.txt
-{
-	margin-left:100px;
-}
+
 .rad
 {
 	width:100px;
