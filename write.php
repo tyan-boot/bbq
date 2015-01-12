@@ -22,33 +22,6 @@ function verify(thisform)
 			alert("骚年，你怎么能什么也说呢~~");
 			return false;
 		}
-		/*var txtRE = /([a-z0-9A-Z_-\.])+@([a-z0-9A-Z_-])+(\.[a-z0-9A-Z])+/;
-		 var pattern = new RegExp("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+");
-		 var mail = thisform.email.value;
-		 */
-		 
-		/*if (pattern.test(email.value))
-		{
-			alert("你");
-			return false;
-		}
-		else {
-			 alert("你的邮箱地址有误");
-			return false;
-		}*/
-		//alert(email.value);
-		/*var mail = email.value;
-		if (mail==""||mail==null)
-		{
-			alert("email");
-		return false;
-		
-		}
-		*/
-		 /*if(!pattern.test(mail)){
-               alert(mail);
-               return false; 
-     }*/
 	}
 }
 </script>

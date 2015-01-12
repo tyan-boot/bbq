@@ -1,9 +1,11 @@
 <?php
 /*
 *@author Boot
-*@var 12.31
-*@var 15-1.9
+*var 12.31
+*var 15-1.9
 * add mail supposed
+* @var 2.1.12
+* 全新样式全新体验
 */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
