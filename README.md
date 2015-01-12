@@ -1,4 +1,4 @@
-﻿# 匿名表白墙
+# 匿名表白墙
 
 匿名表白墙使用PHP写成，数据库默认使用MySQL，邮件发送类库使用[PHPMailer](https://github.com/PHPMailer/PHPMailer)
 
@@ -20,6 +20,10 @@
 * **admin.php** 用来对消息进行删除
 * **install.php** 数据库初始化文件
 > **你必须首先执行一次install.php来初始化数据库!**
+
+* **admin.php** 管理后台，暂时只能删除
+* **login.php** 登录验证文件
+> **你必须修改内部的密码(\*\*\*\*\*\*)为自己的密码!**
 
 * **bbq_config.php** 数据库配置文件
 * **class.phpmailer.php**
