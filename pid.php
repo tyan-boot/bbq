@@ -28,12 +28,14 @@ if (isset($_GET['id']))
 $nick = $now['nick'];
 $txt = $now['txt'];
 echo <<<pid
-$nick:
+<span id="tid" >$nick:
+</span>
 <br />
 <p>
 $txt
 </p>
-$time
+<span id="ttime">$time </span>
+<span id="fid">$id 楼 </span>
 pid;
 	echo <<<ret
 	<br />

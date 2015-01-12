@@ -1,4 +1,4 @@
-﻿/* CSS Document */
+/* CSS Document */
 
 body{
 	margin:0;
@@ -81,25 +81,9 @@ p
   text-indent:0em;
 }
 
-.btn{
-	text-align:center;
-	font:微软雅黑;
-	text-decoration:none;
-	COLOR:#333;
-	cursor:default;
-	text-indent:0em;
-	outline:none;
-	border:1px;
-	background-color:#ccc;
-	height:40px;
-	width:100px
-	
-	}
-.btn1{
-		margin:0 2px;
-		background-color:#66ccff;
-		padding: .4em 1em .4em;
-	}
+	/*text-align:center;
+	text-decoration:none
+	*/
 #foot{
 	text-align:center;
 	text-indent:0em;
@@ -129,4 +113,21 @@ p
 	background:#E9DFDF;
 	border:10px solid #05CB9C;
 	margin-right:-100px;
+}
+a
+{
+	text-decoration:none;
+	color:#008B8B;
+}
+#tid{
+	color:#008B8B;
+}
+#ttime
+{
+	color:#4169E1;
+}
+#fid
+{
+	text-alian:left;
+	font-size:80%;
 }
