@@ -1,31 +1,50 @@
+<?php
+if (!isset($_COOKIE["login"]))
+{
+	echo '<b>请先登录！<b>';
+	echo <<<login
+	<form action="login.php" method="post">
+	用户名:<input type="text" name="user" /><br />
+	密码 :<input type="password" name="passwd" /><br />
+	<input type="submit" value="登录" /><br />
+	</form>
+login;
+}
+else {
+	if ($_COOKIE["login"]=="yes")
+	{
+		echo <<<act
+		<form action="admin.php" method=get>
+		要删除的id: <input type="text" name="did" />
+		<input type="submit" value="确认" />
+		</form>
+		<button onclick="window.location.href='?logout=yes'">登出</button>
+act;
+
+if (isset($_GET['did']))
+{
+	include_once "bbq_config.php";
+	$did = $_GET['did'];
+	$sql = new mysqli(HOST,USER,PASSWD,DB);
+	$del = "delete from bbq where id='$did'";
+	$rd = $sql -> query("delete from bbq where id='$did'");
+	$sql -> close();
+	echo "$del \n";
+	echo "\n删除成功!";
+}
+
+if (isset($_GET['logout']))
+{
+	if ($_GET['logout']=="yes")
+	setcookie("login","",time()-1800);
+	Header("Location: admin.php");
+}
+	}
+}
+?>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width"/>
 <title>表白墙--管理</title>
 <link rel="stylesheet" type="text/css" href="CSS/head.css" />
 </head>
-<?php
-
-include_once "bbq_config.php";
-echo <<<i_d
-<form action="admin.php" method=get>
-id:<input type="text" value="" name="id" />
-passwd:<input type="text" value="" name="passwd" />
-<input type="submit"/>
-</form>
-i_d;
-if (isset($_GET['id']))
-{
-	if ($_GET['passwd']=="******")
-	{
-	$id = $_GET['id'];
-	$sql = new mysqli(HOST,USER,PASSWD,DB);
-	$del = "delete from bbq where id='$id'";
-	$rd = $sql -> query("delete from bbq where id='$id'");
-	$sql -> close();
-	echo $del;
-	echo "\nfinished!";
-	}
-	else{echo "error passwd";}
-}
-?>
