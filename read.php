@@ -25,7 +25,8 @@ while ($now = $read -> fetch_array())
  <p>
  $txt
  </p>
- $time
+ <span id="ttime">$time </span>
+ <span id="fid">$id 楼</span>
  </div>
 text;
 }
