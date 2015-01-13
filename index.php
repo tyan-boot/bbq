@@ -30,10 +30,10 @@ if (!isset($_GET['page']))
 $page=$_GET['page'];
 include_once 'bbq_config.php';
 $sql = new mysqli(HOST,USER,PASSWD,DB);
-$rd = $sql -> query("select id from bbq order by id desc");
+$rd = $sql -> query("select id from bbq order by id desc limit 1");
 $id = $rd -> fetch_array();
 $id = $id['id'];
-$pg_max = $id/15;
+$pg_max = $id/5;
 $pg_max = ceil($pg_max);
 if ($page >= $pg_max)
 {
