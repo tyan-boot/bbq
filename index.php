@@ -11,19 +11,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--
-<meta name="viewport" content="width=device-width"/>
--->
-<title>表白墙</title>
-<link rel="stylesheet" type="text/css" href="CSS/head.css" />
-<link rel="shortcut icon" href="image/favicon.png" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--
+    <meta name="viewport" content="width=device-width"/>
+    -->
+    <title>表白墙</title>
+    <link rel="stylesheet" type="text/css" href="CSS/head.css" />
+    <link rel="shortcut icon" href="image/favicon.png" >
 </head>
 
 <body>
-<?php include_once 'head.html';
+<?php
+include_once 'head.html';
 if (!isset($_GET['page']))
-{$_GET['page']=1;}
+{
+    $_GET['page']=1;
+}
 $page=$_GET['page'];
 include_once 'bbq_config.php';
 $sql = new mysqli(HOST,USER,PASSWD,DB);
@@ -33,15 +36,26 @@ $id = $id['id'];
 $pg_max = $id/15;
 $pg_max = ceil($pg_max);
 if ($page >= $pg_max)
-{$page = $pg_max;}
+{
+    $page = $pg_max;
+}
 else if ($page <= 0)
-{$page = 1;}
+{
+    $page = 1;
+}
 $sql -> close();
 ?>
 
 <div class="text">
 <?php 
-if ($page!=1){$page_p = $page-1;} else {$page_p = $page;}
+if ($page!=1)
+{
+    $page_p = $page-1;
+}
+else
+{
+    $page_p = $page;
+}
 echo <<<btn_w
 <button onclick="window.location.href='write.php'" class="button black"/>我也要写表白</button>
 btn_w;
@@ -51,7 +65,14 @@ btn_p;
 echo <<<n_p
 <button class="page" />	第 $page 页</button>
 n_p;
-if ($page != $pg_max){$page_n = $page+1;} else {$page_n = $page;}
+if ($page != $pg_max)
+{
+    $page_n = $page+1;
+}
+else
+{
+    $page_n = $page;
+}
 echo <<<btn_n
 <button onclick="window.location.href='?page=$page_n'" class="page"/>下一页</button>
 btn_n;
@@ -67,6 +88,6 @@ top;
 include "read.php";
 unset($index);
 ?>
-</div>
-</body>
+        </div>
+    </body>
 </html>

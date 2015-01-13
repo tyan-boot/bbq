@@ -11,4 +11,3 @@ if (isset($_POST["user"]))
 		else Header("Location: admin.php");
 	}
 }
-?>
