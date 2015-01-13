@@ -7,13 +7,9 @@ if (!isset($index))
 include_once 'bbq_config.php';
 $sql = new mysqli(HOST,USER,PASSWD,DB);
 date_default_timezone_set("Asia/Shanghai");
-$id = $sql -> query("select id from bbq order by id desc ");
-$id = $id -> fetch_array();
-$id = $id['id'];
-$id_max = $id - (($page-1)*15);
-$id_min = $id - (($page)*15+1);
+$id_min = ($page-1)*5;
 $sql -> query("SET NAMES 'utf8'");
-$read = $sql -> query("select nick,time,id,txt from bbq  where id between $id_min and $id_max order by id desc ");
+$read = $sql -> query("select nick,time,id,txt from bbq order by id desc limit $id_min,5");
 
 while ($now = $read -> fetch_array())
 {
