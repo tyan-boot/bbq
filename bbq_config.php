@@ -6,4 +6,3 @@ define("PASSWD","******",true);
 define("DB","bbq",true);
 define("CFG","",true);
 
-?>
