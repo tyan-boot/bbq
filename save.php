@@ -64,7 +64,7 @@ else
 <div onclick="window.location.href='index.php' " style=" padding:15px;text-align:center; height:100px; width:300px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />邮件已加入发送队列<br />系统将会定时检查队列并发送<br />或者你可以将地址发给Ta看<br />点击返回查看</div>
 sus;
 }else echo <<<sus_nomail
-<div onclick="window.location.href='index.php' " style=" padding:15px;text-align:center; height:100px; width:300px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />但是由于你填写的邮箱地址错误<br />不予发送，如果想发送，请联系tyan-boot@outlook.com<br />点击返回查看</div>
+<div onclick="window.location.href='index.php' " style=" padding:15px;text-align:center; height:100px; width:300px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />但是由于你填写的邮箱地址错误<br />不予发送，如果想发送，请联系xdyz-boot@outlook.com<br />点击返回查看</div>
 sus_nomail;
     $sql -> close();
     }

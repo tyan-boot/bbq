@@ -1,8 +1,6 @@
 <?php
 
 $mail_list[0][0] = 1;$mail_list[0][1] = "735718299@qq.com";$mail_list[0][2] = "5rWL6K+V";$mail_list[0][3] = "5rWL6K+V";
-$mail_list[1][0] = 2;$mail_list[1][1] = "735718299@qq.com";$mail_list[1][2] = "5rWL6K+VMg==";$mail_list[1][3] = "5rWL6K+V";
-$mail_list[2][0] = 3;$mail_list[2][1] = "735718299@qq.com";$mail_list[2][2] = "5rWL6K+VMg==";$mail_list[2][3] = "5rWL6K+V";
 
 $i = 0;
 include_once 'bbq_config.php';

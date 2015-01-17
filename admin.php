@@ -13,16 +13,17 @@ login;
 else {
     if ($_COOKIE["login"]=="yes")
     {
+		include_once "bbq_config.php";
         echo <<<act
     <form action="admin.php" method=get>
         要删除的id: <input type="text" name="did" />
         <input type="submit" value="确认" />
     </form>
     <button onclick="window.location.href='?logout=yes'">登出</button>
+	<button onclick="window.location.href='listmail.php'">打印邮件列表</button>
 act;
         if (isset($_GET['did']))
         {
-            include_once "bbq_config.php";
             $did = $_GET['did'];
             $sql = new mysqli(HOST,USER,PASSWD,DB);
             $del = "delete from bbq where id='$did'";
