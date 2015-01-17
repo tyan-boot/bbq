@@ -39,6 +39,7 @@ else
     $nname = $_POST['n_name'];
     $nname = stripslashes($nname);
     $nname = htmlspecialchars($nname);
+    $mail = $_POST['email'];
 
     if (isset($_SERVER["HTTP_X_REAL_IP"]))
     {
@@ -55,20 +56,16 @@ else
 
     $sql -> query("SET NAMES 'utf8'");
     $sql -> query("insert into bbq (nick,time,id,txt,ip) values('$nname','$time','$id','$txt','$ip');");
-    $sql -> close();
-
-    if ($_POST['email']!=null ||$_POST['email']!="")
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL))
     {
-        include_once "mail.php";
-        $email = $_POST['email'];
-        if (filter_var($email, FILTER_VALIDATE_EMAIL))
-        {
-            sendmail($email,$id);
-        }
-        else
-        {
-            echo "对不起您输入的邮件地址有误，不予发送，但消息依旧会发布到首页:)";}
-        }
-        echo ('<div onclick="window.location.href=\'index.php\' " style=" padding:15px;text-align:center; height:50px; width:100px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />返回查看</div>');
+	    $sql -> query("update bbq set to_mail = '$mail' where id = '$id'");
+	    $sql -> query("update bbq set is_send = 'f' where id = '$id'");
+	    echo <<<sus
+<div onclick="window.location.href='index.php' " style=" padding:15px;text-align:center; height:100px; width:300px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />邮件已加入发送队列<br />系统将会定时检查队列并发送<br />或者你可以将地址发给Ta看<br />点击返回查看</div>
+sus;
+}else echo <<<sus_nomail
+<div onclick="window.location.href='index.php' " style=" padding:15px;text-align:center; height:100px; width:300px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />但是由于你填写的邮箱地址错误<br />不予发送，如果想发送，请联系tyan-boot@outlook.com<br />点击返回查看</div>
+sus_nomail;
+    $sql -> close();
     }
 ?>
