@@ -1,0 +1,25 @@
+body
+{
+	background-color:#CCC;
+	margin:15% 20% 30%;
+}
+.main
+{
+	border:2px solid #999;
+	border-radius:15px;
+	background-color:#FFF;
+	box-shadow:5px 5px 8px #66ccff;
+}
+.info
+{
+	border-radius:5px;
+	box-shadow:5px 5px 8px #FFF;
+	border:5px solid #FFF;
+	background-color:#fff;
+}
+h1
+{
+	text-align:center;
+	color:#000000;
+	font-size:300%;
+}
