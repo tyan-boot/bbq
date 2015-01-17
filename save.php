@@ -57,7 +57,7 @@ else
     $sql -> query("insert into bbq (nick,time,id,txt,ip) values('$nname','$time','$id','$txt','$ip');");
     $sql -> close();
 
-    /*if ($_POST['email']!=null ||$_POST['email']!="")
+    if ($_POST['email']!=null ||$_POST['email']!="")
     {
         include_once "mail.php";
         $email = $_POST['email'];
@@ -68,7 +68,7 @@ else
         else
         {
             echo "对不起您输入的邮件地址有误，不予发送，但消息依旧会发布到首页:)";}
-        }*/
+        }
         echo ('<div onclick="window.location.href=\'index.php\' " style=" padding:15px;text-align:center; height:50px; width:100px; background-color:#ccc;font:微软雅黑;text-decoration: none;COLOR:#333;cursor:default;margin:30%;border-radius:10px;">提交成功<br />返回查看</div>');
     }
 ?>
