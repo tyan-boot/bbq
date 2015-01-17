@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!isset($_COOKIE["login"]))
 {
 	echo '<b>请先登录！<b>';
@@ -17,6 +17,7 @@ else {
         echo <<<act
     <form action="admin.php" method=get>
         要删除的id: <input type="text" name="did" />
+	要标记为已发送的id: <input type="text" name="mark" />
         <input type="submit" value="确认" />
     </form>
     <button onclick="window.location.href='?logout=yes'">登出</button>
@@ -32,6 +33,15 @@ act;
             echo "$del \n";
             echo "\n删除成功!";
         }
+	if (isset($GET['mark']))
+	{
+	    $makr = $_GET['mark'];
+	    $sql = new mysqli(HOST,USER,PASSWD,DB);
+	    $sql -> query("update bbq set is_send = 't' where id = '$mark'");
+	    $sql -> close();
+	    echo "\n标记成功";
+	}
+
         if (isset($_GET['logout']))
         {
             if ($_GET['logout']=="yes")
