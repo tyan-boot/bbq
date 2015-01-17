@@ -33,9 +33,9 @@ act;
             echo "$del \n";
             echo "\n删除成功!";
         }
-	if (isset($GET['mark']))
+	if (isset($_GET['mark']))
 	{
-	    $makr = $_GET['mark'];
+	    $mark = $_GET['mark'];
 	    $sql = new mysqli(HOST,USER,PASSWD,DB);
 	    $sql -> query("update bbq set is_send = 't' where id = '$mark'");
 	    $sql -> close();
