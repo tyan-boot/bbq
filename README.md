@@ -2,11 +2,11 @@
 
 匿名表白墙使用PHP写成，数据库默认使用MySQL，邮件发送类库使用[PHPMailer](https://github.com/PHPMailer/PHPMailer)
 
-##协议
+## 协议
 
 遵守GPL V2，虽然页脚写有Copyright，但这会在将来移除
 
-##文件列表
+## 文件列表
 
 **CSS/**
 * **head.css** 主要CSS样式表
@@ -36,7 +36,7 @@
 * **write.php** 撰写消息页面
 * **save.php** 供write.php调用并写入数据库
 
-##数据库配置文件
+## 数据库配置文件
 
 ```php
 <?php
@@ -57,9 +57,9 @@ define("CFG","",true);
 ?>
 ```
 
-##注意
+## 注意
 * PHPMailer需PHP服务器启用socket支持
 * bbq_config.php暂时需要手动更新，内容如上所示
 
-##联系我
+## 联系我
 发送邮件到 <a href=mailto:tyan-bbq@outlook.com?subject=表白墙源码反馈>tyan-bbq@outlook.com</a>
